@@ -5,106 +5,74 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmiguelo <mmiguelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/19 11:02:46 by mmiguelo          #+#    #+#             */
-/*   Updated: 2024/11/21 15:24:37 by mmiguelo         ###   ########.fr       */
+/*   Created: 2024/11/25 14:24:41 by mmiguelo          #+#    #+#             */
+/*   Updated: 2024/11/25 16:38:10 by mmiguelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
+char	*save_remaining(char *storage)
+{
+	char	*leftover;
+
+	leftover = ft_strndup(storage + ft_strclen(storage, '\n')
++ 1, ft_strclen(storage, '\0') - ft_strclen(storage, '\n'));
+	free (storage);
+	if (!leftover)
+		return (NULL);
+	return (leftover);
+}
+
 char	*read_text(int fd, char *storage)
 {
+	ssize_t	b_read;
 	char	*buffer;
-	int		nbytes;
-	
-	buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
+
+	b_read = 1;
+	buffer = (char *)malloc ((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buffer)
 		return (NULL);
-	nbytes = 1;
-	while (nbytes != 0 && !strchr(storage, '\n'))
+	*buffer = 0;
+	while (b_read > 0 && !ft_strchr(buffer, '\n'))
 	{
-		nbytes = read(fd, buffer, BUFFER_SIZE);
-		if (nbytes <= 0)
-		{
-			free (buffer);
-			free (storage);
-			return (NULL);
-		}
+		b_read = read(fd, buffer, BUFFER_SIZE);
+		if (b_read == -1)
+			return (free_data(buffer, storage));
+		buffer[b_read] = '\0';
 		storage = ft_strjoin(storage, buffer);
-		buffer[nbytes] = '\0';
-		if (strchr(buffer, '\n'))
-			break;
 	}
-	free (buffer);
+	if (*storage == '\0')
+		return (free_data(buffer, storage));
+	free(buffer);
 	return (storage);
 }
 
-char	*cut_string(char *storage)
+char	*free_data(char *buffer, char *storage)
 {
-	char 	*new;
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	j = 0;
-	if (!storage || storage[0] == '\0')
-		return (NULL);
-	while (storage[i] != '\n' && storage[i] != '\0')
-		i++;
-	new = malloc(i + 2);
-	if (!new)
-		return (NULL);
-	while (j < i + 1)
-	{
-		new[j] = storage[j];
-		j++;
-	}
-	new[j] = '\0';
-	return (new);
+	free(buffer);
+	free(storage);
+	return (NULL);
 }
 
-char	*save_remaining(char *storage)
-{
-	char		*temp;
-	size_t		i;
-	size_t		j;
-	
-	i = ft_strlen(storage, '\n');
-	j = ft_strlen(storage, '\0');
-	if (i == j)
-		return (NULL);
-	temp = malloc(sizeof(char) * (j - i));
-	if (!temp)
-		return (NULL);
-	j = 0;
-	i++;
-	while (storage[i] != '\0')
-	{
-		temp[j] = storage[i];
-		i++;
-		j++;
-	}
-	temp[j] = '\0';
-	return (temp);
- }
- 
 char	*get_next_line(int fd)
 {
 	static char	*storage;
-	char	*result;
+	char		*result;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	if (!storage)
-	{
-		storage = malloc(sizeof(char) * 1);
-		if (!storage)
-			return (NULL);
-		storage[0] = '\0';
-	}
+		storage = NULL;
 	storage = read_text(fd, storage);
-	result = cut_string(storage);
+	if (!storage)
+		return (NULL);
+	result = ft_strndup(storage, ft_strclen(storage, '\n') + 1);
+	if (!result)
+		return (NULL);
 	storage = save_remaining(storage);
+	if (!storage)
+		free(storage);
 	return (result);
 }
 

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmiguelo <mmiguelo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/19 11:01:47 by mmiguelo          #+#    #+#             */
-/*   Updated: 2024/11/20 19:10:39 by mmiguelo         ###   ########.fr       */
+/*   Created: 2024/11/25 14:26:12 by mmiguelo          #+#    #+#             */
+/*   Updated: 2024/11/25 16:36:13 by mmiguelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,21 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 6
+#  define BUFFER_SIZE 42
 # endif
 
-# include <string.h>
-# include <stdio.h>
-# include <unistd.h>
-# include <fcntl.h>
-# include <stdlib.h>
+# include <stdlib.h> //malloc
+# include <stdio.h> //print
+# include <unistd.h> //read
+# include <fcntl.h> // open files
 
+char	*ft_strchr(char *str, char c);
+char	*ft_strjoin(char *s1, char *s2);
+char	*ft_strndup(char *s, int len);
+char	*free_data(char *storage, char *buffer);
 char	*read_text(int fd, char *storage);
-char	*cut_string(char *storage);
 char	*save_remaining(char *storage);
 char	*get_next_line(int fd);
-size_t	ft_strlen(char *str, char c);
-char	*ft_strlcpy(char *dst, char *src, size_t size);
-char	*ft_strjoin(char *s1, char *s2);
-char	*ft_strchr(const char *s, int c);
+int		ft_strclen(char *str, char c);
 
 #endif
