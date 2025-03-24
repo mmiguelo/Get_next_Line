@@ -1,10 +1,18 @@
 ![# GET_NEXT_LINE](https://github.com/mmiguelo/42-project-badges/blob/main/covers/cover-get_next_line.png)
 
+<!-------📌 Overview-------->
 ## 📌 Overview
+
 The `get_next_line` project is a fundamental part of file handling in C, designed to efficiently read and return lines from a file descriptor. It dynamically manages memory while optimizing performance for various input scenarios.
+
+----
+
 <br>
-<br>
+
+<!-------✨ Features-------->
 ## ✨ Features
+
+
 <br>✅ Reads a file line by line.
 <br>✅ Uses a dynamically adjustable buffer size.
 <br>✅ Optimized memory management using static storage.
