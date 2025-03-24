@@ -16,6 +16,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 * [How It Works 🛠](#how-it-works-)
 * [Utility Functions 🔗](#utility-functions-)
 * [Memory Management 🧠](#memory-management-)
+* [Usage ⚙️](#usage-)
 
 
 <!-- mtoc-end -->
@@ -78,7 +79,7 @@ char *get_next_line(int fd);
 <br>
 <br>
 
-## ⚙️ Usage
+# Usage ⚙️
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🔨 Compilation
 
