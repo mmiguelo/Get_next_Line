@@ -45,6 +45,7 @@ char *get_next_line(int fd);
 
 <br>
 <br>
+
 # How It Works 🛠
 <br>1️⃣ Reads data in chunks of `BUFFER_SIZE` using `read()`.  
 <br>2️⃣ Stores data in a static variable until a newline (`\n`) or EOF is encountered.  
