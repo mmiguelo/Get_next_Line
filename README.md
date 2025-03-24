@@ -11,7 +11,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 <!-- mtoc-start -->
 
 * [Features ✨](#features-)
-* [Install and Compile ⚙️](#installation-)
+* [Project Files 📂](#project-files-)
 * [Makefile rules 🔧](#makefile-rules-)
 * [Link and Description 🔗](#link-and-description)
 
@@ -31,7 +31,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 <br>✅ Handles different edge cases, such as empty files or invalid file descriptors.
 <br>
 <br>
-## 📂 Project Files
+# Project Files 📂
 <br> 📜 `get_next_line.c` – Contains the core logic of the function.
 <br> 🔧 `get_next_line_utils.c` – Provides helper functions for string manipulation.
 <br> 📘 `get_next_line.h` – Header file defining function prototypes and macros.
