@@ -1,7 +1,7 @@
 ![# GET_NEXT_LINE](https://github.com/mmiguelo/42-project-badges/blob/main/covers/cover-get_next_line.png)
 
 <p>
-    <img src="https://img.shields.io/badge/score-125%20%2F%20100-success?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/score-100%20%2F%20100-success?style=for-the-badge" />
     <img src="https://img.shields.io/github/repo-size/mmiguelo/Get_next_Line?style=for-the-badge&logo=github">
     <img src="https://img.shields.io/github/languages/count/mmiguelo/Get_next_Line?style=for-the-badge&logo=" />
     <img src="https://img.shields.io/github/languages/top/mmiguelo/Get_next_Line?style=for-the-badge" />
