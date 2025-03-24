@@ -79,7 +79,7 @@ char *get_next_line(int fd);
 
 ## ⚙️ Usage
 
-### 🔨 Compilation
+&nbsp; ### 🔨 Compilation
 
 To compile with a `BUFFER_SIZE` of 42:
 ```sh
