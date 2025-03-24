@@ -10,15 +10,15 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 
 <!-- mtoc-start -->
 
-[Features ✨](#features-) <br>
-[Project Files 📂](#project-files-) <br>
-[Function Prototype 🔧](#function-prototype-) <br>
-[How It Works 🛠](#how-it-works-) <br>
-[Utility Functions 🔗](#utility-functions-) <br>
-[Memory Management 🧠](#memory-management-) <br>
-[Usage ⚙️](#usage-%EF%B8%8F) <br>
-<li> [🔨 Compilation](#-compilation) <br></li>
-[Important Notes ⚠️](#important-notes-%EF%B8%8F)
+<br> [Features ✨](#features-)
+<br> [Project Files 📂](#project-files-)
+<br> [Function Prototype 🔧](#function-prototype-)
+<br> [How It Works 🛠](#how-it-works-)
+<br> [Utility Functions 🔗](#utility-functions-)
+<br> [Memory Management 🧠](#memory-management-)
+<br> [Usage ⚙️](#usage-%EF%B8%8F)
+<br> [🔨 Compilation](#-compilation)
+<br> [Important Notes ⚠️](#important-notes-%EF%B8%8F)
 
 
 <!-- mtoc-end -->
