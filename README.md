@@ -10,8 +10,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 
 <!-- mtoc-start -->
 
-* [About 📚](#about-)
-* [Features 🛠️](#features-)
+* [Features ✨](#features-)
 * [Install and Compile ⚙️](#installation-)
 * [Makefile rules 🔧](#makefile-rules-)
 * [Link and Description 🔗](#link-and-description)
@@ -23,7 +22,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 
 <div align=left>
 
-# About 📚
+# Features ✨
 
 <br>✅ Reads a file line by line.
 <br>✅ Uses a dynamically adjustable buffer size.
