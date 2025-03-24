@@ -17,7 +17,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 [Utility Functions 🔗](#utility-functions-) <br>
 [Memory Management 🧠](#memory-management-) <br>
 [Usage ⚙️](#usage-%EF%B8%8F) <br>
-<li>[🔨 Compilation](#-compilation) <br></li>
+<li> [🔨 Compilation](#-compilation) <br></li>
 [Important Notes ⚠️](#important-notes-%EF%B8%8F)
 
 
