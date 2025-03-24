@@ -17,7 +17,8 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 <br> [Utility Functions 🔗](#utility-functions-)
 <br> [Memory Management 🧠](#memory-management-)
 <br> [Usage ⚙️](#usage-%EF%B8%8F)
-<br>&nbsp;&nbsp;&nbsp;&nbsp; [🔨 Compilation](#-compilation)
+<br>&nbsp;&nbsp;&nbsp;&nbsp; [Compilation 🔨](#-compilation)
+<br>&nbsp;&nbsp;&nbsp;&nbsp; [Example Usage 🚀](#example-usage-)
 <br> [Important Notes ⚠️](#important-notes-%EF%B8%8F)
 
 
@@ -83,14 +84,14 @@ char *get_next_line(int fd);
 
 # Usage ⚙️
 
-### 🔨 Compilation
+### Compilation 🔨
 
 To compile with a `BUFFER_SIZE` of 42:
 ```sh
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c -o gnl
 ```
 
-### 🚀 Example Usage
+### Example Usage 🚀
 ```c
 #include "get_next_line.h"
 #include <fcntl.h>
