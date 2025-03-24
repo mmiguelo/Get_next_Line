@@ -14,7 +14,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 * [Project Files 📂](#project-files-)
 * [Function Prototype 🔧](#function-prototype-)
 * [How It Works 🛠](#how-it-works-)
-* 
+* [Utility Functions 🔗](#utility-functions-)
 
 
 <!-- mtoc-end -->
@@ -57,7 +57,7 @@ char *get_next_line(int fd);
 <br>
 <br>
 
-## 🔗 Utility Functions
+# Utility Functions 🔗
 
 🔹 `ft_strjoin` – Merges two strings while freeing the first one.
 <br>🔹 `ft_strclen` – Computes the length of a string up to a specific character.
