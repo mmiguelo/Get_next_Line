@@ -17,6 +17,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 * [Utility Functions 🔗](#utility-functions-)
 * [Memory Management 🧠](#memory-management-)
 * [Usage ⚙️](#usage-)
+* [Important Notes ⚠️](#important-notes-)
 
 
 <!-- mtoc-end -->
@@ -110,7 +111,7 @@ int main(void)
 ```
 <br>
 
-## ⚠️ Important Notes
+# Important Notes ⚠️
 
 ⚡ BUFFER_SIZE can be modified at compile time.
 <br>⚡ Returns NULL when no more lines are available.
