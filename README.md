@@ -12,7 +12,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 
 * [Features ✨](#features-)
 * [Project Files 📂](#project-files-)
-* [Makefile rules 🔧](#makefile-rules-)
+* [Function Prototype 🔧](#function-prototype-)
 * [Link and Description 🔗](#link-and-description)
 
 
@@ -37,7 +37,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 <br> 📘 `get_next_line.h` – Header file defining function prototypes and macros.
 <br>
 <br>
-## 🔧 Function Prototype
+## Function Prototype 🔧
 ```c
 char *get_next_line(int fd);
 ```
