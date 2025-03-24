@@ -114,7 +114,9 @@ int main(void)
 <br>⚡ Returns NULL when no more lines are available.
 <br>⚡ Uses dynamic memory allocation, requiring manual free() calls.
 <br>⚡ Does not support multiple file descriptors simultaneously. (YET)
+
 <br>
+
 ## 📜 License
 
 This project is licensed under the MIT License.
