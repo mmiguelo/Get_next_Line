@@ -12,12 +12,12 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 
 [Features ✨](#features-) <br>
 [Project Files 📂](#project-files-) <br>
-[Function Prototype 🔧](#function-prototype-)
-[How It Works 🛠](#how-it-works-)
-[Utility Functions 🔗](#utility-functions-)
-[Memory Management 🧠](#memory-management-)
-[Usage ⚙️](#usage-%EF%B8%8F)
-[🔨 Compilation](#-compilation)
+[Function Prototype 🔧](#function-prototype-) <br>
+[How It Works 🛠](#how-it-works-) <br>
+[Utility Functions 🔗](#utility-functions-) <br>
+[Memory Management 🧠](#memory-management-) <br>
+[Usage ⚙️](#usage-%EF%B8%8F) <br>&nbsp;&nbsp;&nbsp;&nbsp;
+[🔨 Compilation](#-compilation) <br>
 [Important Notes ⚠️](#important-notes-%EF%B8%8F)
 
 
