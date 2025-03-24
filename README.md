@@ -93,7 +93,7 @@ char *get_next_line(int fd);
 To compile with a custom `BUFFER_SIZE` of your choice (replace `num` with your desired size):
 
 ```sh
-gcc -Wall -Wextra -Werror -D BUFFER_SIZE=num get_next_line.c get_next_line_utils.c -o gnl
+gcc -Wall -Wextra -Werror -D BUFFER_SIZE=**num** get_next_line.c get_next_line_utils.c -o gnl
 ```
 
 ### Example Usage 🚀
