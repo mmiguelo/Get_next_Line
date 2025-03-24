@@ -8,10 +8,8 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 ----
 <!-------Index-------->
 # Index
-<ul>
-    <li><strong><a href="✨-Features" style="color:white">1. ✨ Features</a></strong></li>
-	<ul style="list-style-type:disc">
-</ul>
+
+[✨ Features](#features-)
 
 <!-------✨ Features-------->
 ## ✨ Features
