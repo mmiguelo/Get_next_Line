@@ -25,7 +25,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 
 # Features ✨
 
-<br>✅ Reads a file line by line.
+✅ Reads a file line by line.
 <br>✅ Uses a dynamically adjustable buffer size.
 <br>✅ Optimized memory management using static storage.
 <br>✅ Custom-built utility functions for string operations.
@@ -35,7 +35,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 
 # Project Files 📂
 
-<br> 📜 `get_next_line.c` – Contains the core logic of the function.
+ 📜 `get_next_line.c` – Contains the core logic of the function.
 <br> 🔧 `get_next_line_utils.c` – Provides helper functions for string manipulation.
 <br> 📘 `get_next_line.h` – Header file defining function prototypes and macros.
 <br>
@@ -50,7 +50,7 @@ char *get_next_line(int fd);
 
 # How It Works 🛠
 
-<br>1️⃣ Reads data in chunks of `BUFFER_SIZE` using `read()`.  
+1️⃣ Reads data in chunks of `BUFFER_SIZE` using `read()`.  
 <br>2️⃣ Stores data in a static variable until a newline (`\n`) or EOF is encountered.  
 <br>3️⃣ Extracts and returns a complete line.  
 <br>4️⃣ Retains any remaining data in static storage for subsequent function calls.
@@ -59,7 +59,7 @@ char *get_next_line(int fd);
 
 ## 🔗 Utility Functions
 
-<br>🔹 `ft_strjoin` – Merges two strings while freeing the first one.
+🔹 `ft_strjoin` – Merges two strings while freeing the first one.
 <br>🔹 `ft_strclen` – Computes the length of a string up to a specific character.
 <br>🔹 `ft_strndup` – Duplicates a string up to a specified length.
 <br>🔹 `ft_strchr` – Finds a character in a string.
@@ -71,7 +71,7 @@ char *get_next_line(int fd);
 
 ## 🧠 Memory Management
 
-<br>📌 The `read_text` function continuously reads from the file descriptor and appends new data to the existing storage.
+📌 The `read_text` function continuously reads from the file descriptor and appends new data to the existing storage.
 <br>📌 The `save_remaining` function extracts and retains leftover content for the next function call.
 <br>📌 The `free_data` function ensures no memory leaks by freeing dynamically allocated memory.
 <br>
@@ -109,7 +109,7 @@ int main(void)
 
 ## ⚠️ Important Notes
 
-<br>⚡ BUFFER_SIZE can be modified at compile time.
+⚡ BUFFER_SIZE can be modified at compile time.
 <br>⚡ Returns NULL when no more lines are available.
 <br>⚡ Uses dynamic memory allocation, requiring manual free() calls.
 <br>⚡ Does not support multiple file descriptors simultaneously. (YET)
