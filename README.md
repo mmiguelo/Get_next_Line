@@ -10,7 +10,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 
 <!-- mtoc-start -->
 
-* [Features ✨](#features)
+* [Features ✨](#features-)
 * [Project Files 📂](#project-files-)
 * [Function Prototype 🔧](#function-prototype-)
 * [How It Works 🛠](#how-it-works-)
