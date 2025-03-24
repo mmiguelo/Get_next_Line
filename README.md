@@ -6,10 +6,9 @@
 The `get_next_line` project is a fundamental part of file handling in C, designed to efficiently read and return lines from a file descriptor. It dynamically manages memory while optimizing performance for various input scenarios.
 
 ----
-<!-------Index-------->
-# Index
+<h2 align=left>Index</h2>
 
-<br>[✨ Features](#features)
+<br>[Features ✨](#features)
 <br>[📂 Project Files](#project-files)
 <br>[🔧 Function Prototype](#function-prototype)
 <br>[🛠 How It Works](#how-it-works)
@@ -17,10 +16,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 <br>[🧠 Memory Management](#memory-management)
 <br>[⚙️ Usage](#usage)
 
-
-
-<!-------✨ Features-------->
-# ✨ Features
+# Features ✨
 
 <br>✅ Reads a file line by line.
 <br>✅ Uses a dynamically adjustable buffer size.
