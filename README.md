@@ -8,15 +8,22 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 ----
 <h2 align=left>Index</h2>
 
-<br>[Features ✨](#features)
-<br>[📂 Project Files](#project-files)
-<br>[🔧 Function Prototype](#function-prototype)
-<br>[🛠 How It Works](#how-it-works)
-<br>[🔗 Utility Functions](#utility-functions)
-<br>[🧠 Memory Management](#memory-management)
-<br>[⚙️ Usage](#usage)
+<!-- mtoc-start -->
 
-# Features ✨
+* [About 📚](#about-)
+* [Features 🛠️](#features-)
+* [Install and Compile ⚙️](#installation-)
+* [Makefile rules 🔧](#makefile-rules-)
+* [Link and Description 🔗](#link-and-description)
+
+
+<!-- mtoc-end -->
+
+<div/>
+
+<div align=left>
+
+# About 📚
 
 <br>✅ Reads a file line by line.
 <br>✅ Uses a dynamically adjustable buffer size.
