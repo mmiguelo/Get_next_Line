@@ -86,6 +86,16 @@ char *get_next_line(int fd);
 
 ### Compilation 🔨
 
+# ⚙️ Usage
+
+🔨 **Compilation**
+
+To compile with a custom `BUFFER_SIZE` of your choice (replace `num` with your desired size):
+
+```sh
+gcc -Wall -Wextra -Werror -D BUFFER_SIZE=num get_next_line.c get_next_line_utils.c -o gnl
+```
+
 To compile with a `BUFFER_SIZE` of 42:
 ```sh
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c -o gnl
