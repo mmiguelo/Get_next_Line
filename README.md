@@ -15,6 +15,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 * [Function Prototype 🔧](#function-prototype-)
 * [How It Works 🛠](#how-it-works-)
 * [Utility Functions 🔗](#utility-functions-)
+* [Memory Management 🧠](#memory-management-)
 
 
 <!-- mtoc-end -->
@@ -69,7 +70,7 @@ char *get_next_line(int fd);
 <br>
 <br>
 
-## 🧠 Memory Management
+# Memory Management 🧠
 
 📌 The `read_text` function continuously reads from the file descriptor and appends new data to the existing storage.
 <br>📌 The `save_remaining` function extracts and retains leftover content for the next function call.
