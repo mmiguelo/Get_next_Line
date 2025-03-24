@@ -8,11 +8,9 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 ----
 <!-------Index-------->
 # Index
-<!-- mtoc-start -->
 
-[✨ Features](#✨-features)
+[✨ Features](#features-)
 
-<!-- mtoc-end -->
 
 <!-------✨ Features-------->
 ## ✨ Features
