@@ -57,7 +57,8 @@ char *get_next_line(int fd);
 <br>
 
 ## 🔗 Utility Functions
-<br> 🔹 `ft_strjoin` – Merges two strings while freeing the first one.
+
+<br>🔹 `ft_strjoin` – Merges two strings while freeing the first one.
 <br>🔹 `ft_strclen` – Computes the length of a string up to a specific character.
 <br>🔹 `ft_strndup` – Duplicates a string up to a specified length.
 <br>🔹 `ft_strchr` – Finds a character in a string.
@@ -68,6 +69,7 @@ char *get_next_line(int fd);
 <br>
 
 ## 🧠 Memory Management
+
 <br>📌 The `read_text` function continuously reads from the file descriptor and appends new data to the existing storage.
 <br>📌 The `save_remaining` function extracts and retains leftover content for the next function call.
 <br>📌 The `free_data` function ensures no memory leaks by freeing dynamically allocated memory.
@@ -77,6 +79,7 @@ char *get_next_line(int fd);
 ## ⚙️ Usage
 
 ### 🔨 Compilation
+
 To compile with a `BUFFER_SIZE` of 42:
 ```sh
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c -o gnl
