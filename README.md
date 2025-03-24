@@ -13,7 +13,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 * [Features ✨](#features-)
 * [Project Files 📂](#project-files-)
 * [Function Prototype 🔧](#function-prototype-)
-* [How It Works 🛠](##how-it-works-)
+* [How It Works 🛠](#how-it-works-)
 
 
 <!-- mtoc-end -->
@@ -44,7 +44,7 @@ char *get_next_line(int fd);
 
 <br>
 <br>
-## How It Works 🛠
+# How It Works 🛠
 <br>1️⃣ Reads data in chunks of `BUFFER_SIZE` using `read()`.  
 <br>2️⃣ Stores data in a static variable until a newline (`\n`) or EOF is encountered.  
 <br>3️⃣ Extracts and returns a complete line.  
