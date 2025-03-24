@@ -107,6 +107,7 @@ int main(void)
 }
 ```
 <br>
+
 ## ⚠️ Important Notes
 
 ⚡ BUFFER_SIZE can be modified at compile time.
