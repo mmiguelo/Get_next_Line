@@ -46,6 +46,8 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 ```c
 char *get_next_line(int fd);
 ```
+<br>
+<br>
 
 # How It Works 🛠
 
