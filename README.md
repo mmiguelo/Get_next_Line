@@ -80,4 +80,15 @@ int main(void)
 }
 ```
 
+## ⚠️ Important Notes
+
+<br>⚡ BUFFER_SIZE can be modified at compile time.
+<br>⚡ Returns NULL when no more lines are available.
+<br>⚡ Uses dynamic memory allocation, requiring manual free() calls.
+<br>⚡ Does not support multiple file descriptors simultaneously. (YET)
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
 <p align="right">(<a href="#readme-top">get to top</a>)</p>
