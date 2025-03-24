@@ -38,7 +38,7 @@ The `get_next_line` project is a fundamental part of file handling in C, designe
 <br>
 <br>
 
-# Project Files 📂
+## Project Files 📂
 
  📜 `get_next_line.c` – Contains the core logic of the function.
 <br> 🔧 `get_next_line_utils.c` – Provides helper functions for string manipulation.
@@ -53,7 +53,7 @@ char *get_next_line(int fd);
 ```
 <br>
 
-# How It Works 🛠
+## How It Works 🛠
 
 1️⃣ Reads data in chunks of `BUFFER_SIZE` using `read()`.  
 <br>2️⃣ Stores data in a static variable until a newline (`\n`) or EOF is encountered.  
@@ -62,7 +62,7 @@ char *get_next_line(int fd);
 <br>
 <br>
 
-# Utility Functions 🔗
+## Utility Functions 🔗
 
 🔹 `ft_strjoin` – Merges two strings while freeing the first one.
 <br>🔹 `ft_strclen` – Computes the length of a string up to a specific character.
@@ -74,7 +74,7 @@ char *get_next_line(int fd);
 <br>
 <br>
 
-# Memory Management 🧠
+## Memory Management 🧠
 
 📌 The `read_text` function continuously reads from the file descriptor and appends new data to the existing storage.
 <br>📌 The `save_remaining` function extracts and retains leftover content for the next function call.
@@ -82,7 +82,7 @@ char *get_next_line(int fd);
 <br>
 <br>
 
-# Usage ⚙️
+## Usage ⚙️
 
 ### Compilation 🔨
 
@@ -113,7 +113,7 @@ int main(void)
 ```
 <br>
 
-# Important Notes ⚠️
+## Important Notes ⚠️
 
 ⚡ BUFFER_SIZE can be modified at compile time.
 <br>⚡ Returns NULL when no more lines are available.
