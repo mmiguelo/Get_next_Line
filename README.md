@@ -59,4 +59,6 @@ To compile with a `BUFFER_SIZE` of 42:
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c -o gnl
 ```
 
+## 🚀 Example Usage
+
 <p align="right">(<a href="#readme-top">get to top</a>)</p>
