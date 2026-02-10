@@ -1,110 +1,165 @@
+<a id="readme-top"></a>
+
+<div align="center">
+
 ![# GET_NEXT_LINE](https://github.com/mmiguelo/42-project-badges/blob/main/covers/cover-get_next_line.png)
 
-<p>
-    <img src="https://img.shields.io/badge/score-100%20%2F%20100-success?style=for-the-badge" />
-    <img src="https://img.shields.io/github/repo-size/mmiguelo/Get_next_Line?style=for-the-badge&logo=github">
-    <img src="https://img.shields.io/github/languages/count/mmiguelo/Get_next_Line?style=for-the-badge&logo=" />
-    <img src="https://img.shields.io/github/languages/top/mmiguelo/Get_next_Line?style=for-the-badge" />
-    <img src="https://img.shields.io/github/last-commit/mmiguelo/Get_next_Line?style=for-the-badge" />
-</p>
+# 📖 get_next_line
 
-<!-------📌 Overview-------->
-## 📌 Overview
+**Read a file line by line — one call at a time | 42 School Project**
 
-The `get_next_line` project is a fundamental part of file handling in C, designed to efficiently read and return lines from a file descriptor. It dynamically manages memory while optimizing performance for various input scenarios.
+[![42 School](https://img.shields.io/badge/42-School-000000?style=for-the-badge&logo=42&logoColor=white)](https://42.fr)
+[![Score](https://img.shields.io/badge/Score-100%20%2F%20100-brightgreen?style=for-the-badge)](https://github.com/mmiguelo/Get_next_Line)
+[![Language](https://img.shields.io/badge/Language-C-00599C?style=for-the-badge&logo=c&logoColor=white)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![Norminette](https://img.shields.io/badge/Norm-OK-brightgreen?style=for-the-badge)](https://github.com/42School/norminette)
 
-----
-<h2 align=left>Index</h2>
+---
 
-<!-- mtoc-start -->
+*A C function that returns the next line from a file descriptor each time it is called, handling any buffer size.*
 
-[Features ✨](#features-)
-<br> [Project Files 📂](#project-files-)
-<br> [Function Prototype 🔧](#function-prototype-)
-<br> [How It Works 🛠](#how-it-works-)
-<br> [Utility Functions 🔗](#utility-functions-)
-<br> [Memory Management 🧠](#memory-management-)
-<br> [Usage ⚙️](#usage-%EF%B8%8F)
-<br>&nbsp;&nbsp;&nbsp;&nbsp; [Compilation 🔨](#compilation-)
-<br>&nbsp;&nbsp;&nbsp;&nbsp; [Example Usage 🚀](#example-usage-)
-<br> [Important Notes ⚠️](#important-notes-%EF%B8%8F)
+</div>
 
+---
 
-<!-- mtoc-end -->
+## 📖 Table of Contents
 
-<div/>
+- [About](#-about)
+- [Features](#-features)
+- [Function Prototype](#-function-prototype)
+- [How It Works](#-how-it-works)
+- [Project Files](#-project-files)
+- [Utility Functions](#-utility-functions)
+- [Memory Management](#-memory-management)
+- [Usage](#%EF%B8%8F-usage)
+  - [Compilation](#compilation)
+  - [Example](#example)
+- [Important Notes](#%EF%B8%8F-important-notes)
+- [Author](#-author)
 
-<div align=left>
+---
 
-## Features ✨
+## 🧠 About
 
-✅ Reads a file line by line.
-<br>✅ Uses a dynamically adjustable buffer size.
-<br>✅ Optimized memory management using static storage.
-<br>✅ Custom-built utility functions for string operations.
-<br>✅ Handles different edge cases, such as empty files or invalid file descriptors.
-<br>
-<br>
+The **get_next_line** project is a fundamental exercise in file I/O and dynamic memory management in C. The goal is to write a function that, when called in a loop, returns one line at a time from a given file descriptor — including `stdin`.
 
-## Project Files 📂
+This project reinforces key concepts:
 
- 📜 `get_next_line.c` – Contains the core logic of the function.
-<br> 🔧 `get_next_line_utils.c` – Provides helper functions for string manipulation.
-<br> 📘 `get_next_line.h` – Header file defining function prototypes and macros.
-<br>
-<br>
+- **Static variables** for state persistence across function calls
+- **Dynamic memory allocation** and proper freeing strategies
+- **File descriptor** reading with configurable buffer sizes
+- Robust **edge case handling** (empty files, invalid FDs, variable buffer sizes)
 
-## Function Prototype 🔧
+---
+
+## ✨ Features
+
+| | Feature |
+|:--:|:--------|
+| ✅ | Reads a file **line by line**, one call at a time |
+| ✅ | Supports **any `BUFFER_SIZE`** defined at compile time |
+| ✅ | Uses **static storage** to retain data between calls |
+| ✅ | Custom-built utility functions (no external libraries) |
+| ✅ | Handles edge cases: empty files, invalid FDs, `BUFFER_SIZE` of 1 or 10000+ |
+
+---
+
+## 🔧 Function Prototype
 
 ```c
 char *get_next_line(int fd);
 ```
-<br>
 
-## How It Works 🛠
+| Parameter | Description |
+|:----------|:------------|
+| `fd` | The file descriptor to read from |
+| **Return** | The next line (including `\n`), or `NULL` if EOF / error |
 
-1️⃣ Reads data in chunks of `BUFFER_SIZE` using `read()`.  
-<br>2️⃣ Stores data in a static variable until a newline (`\n`) or EOF is encountered.  
-<br>3️⃣ Extracts and returns a complete line.  
-<br>4️⃣ Retains any remaining data in static storage for subsequent function calls.
-<br>
-<br>
+---
 
-## Utility Functions 🔗
+## 🛠 How It Works
 
-🔹 `ft_strjoin` – Merges two strings while freeing the first one.
-<br>🔹 `ft_strclen` – Computes the length of a string up to a specific character.
-<br>🔹 `ft_strndup` – Duplicates a string up to a specified length.
-<br>🔹 `ft_strchr` – Finds a character in a string.
-<br>🔹 `free_data` – Handles proper memory deallocation.
-<br>🔹 `save_remaining` – Saves leftover buffer content after extracting a line.
-<br>🔹 `read_text` – Reads and appends data from the file descriptor.
-<br>
-<br>
-
-## Memory Management 🧠
-
-📌 The `read_text` function continuously reads from the file descriptor and appends new data to the existing storage.
-<br>📌 The `save_remaining` function extracts and retains leftover content for the next function call.
-<br>📌 The `free_data` function ensures no memory leaks by freeing dynamically allocated memory.
-<br>
-<br>
-
-## Usage ⚙️
-
-### Compilation 🔨
-
-# ⚙️ Usage
-
-🔨 **Compilation**
-
-To compile with a custom `BUFFER_SIZE` of your choice (replace `num` with your desired size):
-
-```sh
-gcc -Wall -Wextra -Werror -D BUFFER_SIZE=num get_next_line.c get_next_line_utils.c -o gnl
+```
+┌──────────────────────────────────────────────────────┐
+│                   get_next_line(fd)                   │
+├──────────────────────────────────────────────────────┤
+│                                                      │
+│  1️⃣  read_text()                                     │
+│     Reads chunks of BUFFER_SIZE from fd              │
+│     Appends to static storage until \n or EOF        │
+│                        ↓                             │
+│  2️⃣  Extract line                                    │
+│     Copies everything up to (and including) \n       │
+│     Returns this as the result                       │
+│                        ↓                             │
+│  3️⃣  save_remaining()                                │
+│     Stores leftover data after \n in static storage  │
+│     Ready for the next call                          │
+│                                                      │
+└──────────────────────────────────────────────────────┘
 ```
 
-### Example Usage 🚀
+> The **static variable** persists between calls, so data read beyond the newline is never lost — it's simply saved for next time.
+
+---
+
+## 📂 Project Files
+
+```
+Get_next_Line/
+├── get_next_line.c          # Core logic: read, extract, save
+├── get_next_line_utils.c    # Helper functions for string ops
+├── get_next_line.h          # Header: prototypes & BUFFER_SIZE
+└── README.md
+```
+
+---
+
+## 🔗 Utility Functions
+
+<div align="center">
+
+| Function | Description |
+|:---------|:------------|
+| `ft_strjoin` | Concatenates two strings, freeing the first |
+| `ft_strclen` | Returns length of string up to a given character |
+| `ft_strndup` | Duplicates a string up to `n` bytes |
+| `ft_strchr` | Locates a character in a string |
+| `free_data` | Safely frees buffer and storage to prevent leaks |
+| `save_remaining` | Extracts and stores leftover content after `\n` |
+| `read_text` | Reads from fd and appends to storage until `\n` or EOF |
+
+</div>
+
+---
+
+## 🧹 Memory Management
+
+The function uses a careful allocation strategy to avoid leaks:
+
+| Function | Responsibility |
+|:---------|:---------------|
+| `read_text` | Allocates a read buffer, appends to storage via `ft_strjoin` (which frees the old storage) |
+| `save_remaining` | Frees the full storage after extracting the leftover portion into a new allocation |
+| `free_data` | Frees both the read buffer and storage on error — returns `NULL` for clean error propagation |
+
+> 💡 Every `malloc` has a corresponding `free` — no memory is leaked on success or failure paths.
+
+---
+
+## ⚙️ Usage
+
+### Compilation
+
+Compile with a custom `BUFFER_SIZE` (replace `42` with any positive integer):
+
+```bash
+gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c -o gnl
+```
+
+> If `BUFFER_SIZE` is not specified, it defaults to **42**.
+
+### Example
+
 ```c
 #include "get_next_line.h"
 #include <fcntl.h>
@@ -112,31 +167,51 @@ gcc -Wall -Wextra -Werror -D BUFFER_SIZE=num get_next_line.c get_next_line_utils
 
 int main(void)
 {
-    int fd = open("file.txt", O_RDONLY);
-    char *line;
-    
+    int     fd = open("file.txt", O_RDONLY);
+    char    *line;
+
     while ((line = get_next_line(fd)))
     {
         printf("%s", line);
         free(line);
     }
     close(fd);
-    return 0;
+    return (0);
 }
 ```
-<br>
 
-## Important Notes ⚠️
+**Output** (for a file containing `Hello\nWorld\n`):
+```
+Hello
+World
+```
 
-⚡ BUFFER_SIZE can be modified at compile time.
-<br>⚡ Returns NULL when no more lines are available.
-<br>⚡ Uses dynamic memory allocation, requiring manual free() calls.
-<br>⚡ Does not support multiple file descriptors simultaneously. (YET)
+---
 
-<br>
+## ⚠️ Important Notes
 
-## 📜 License
+| | Note |
+|:--:|:-----|
+| ⚡ | `BUFFER_SIZE` can be overridden at compile time with `-D BUFFER_SIZE=n` |
+| ⚡ | Returns `NULL` when there are no more lines to read (EOF) |
+| ⚡ | The caller is responsible for calling `free()` on each returned line |
+| ⚡ | Does not support multiple file descriptors simultaneously *(yet)* |
+| ⚡ | Undefined behavior if `BUFFER_SIZE` is negative or zero |
 
-This project is licensed under the MIT License.
+---
 
-<p align="right">(<a href="#readme-top">get to top</a>)</p>
+## 👤 Author
+
+**mmiguelo** — 42 Student
+
+[![GitHub](https://img.shields.io/badge/GitHub-mmiguelo-181717?style=for-the-badge&logo=github)](https://github.com/mmiguelo)
+
+---
+
+<div align="center">
+
+*Made with ❤️ at 42*
+
+<p>(<a href="#readme-top">⬆️ back to top</a>)</p>
+
+</div>
