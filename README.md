@@ -54,7 +54,7 @@ This project reinforces key concepts:
 ## ✨ Features
 
 | | Feature |
-|:--:|:--------|
+|:--:|:--------:|
 | ✅ | Reads a file **line by line**, one call at a time |
 | ✅ | Supports **any `BUFFER_SIZE`** defined at compile time |
 | ✅ | Uses **static storage** to retain data between calls |
@@ -80,7 +80,7 @@ char *get_next_line(int fd);
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│                   get_next_line(fd)                   │
+│                   get_next_line(fd)                  │
 ├──────────────────────────────────────────────────────┤
 │                                                      │
 │  1️⃣  read_text()                                     │
