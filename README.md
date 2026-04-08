@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![# GET_NEXT_LINE](https://github.com/mmiguelo/42-project-badges/blob/main/covers/cover-get_next_line.png)
-
 # 📖 get_next_line
 
 **Read a file line by line — one call at a time | 42 School Project**
